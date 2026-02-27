@@ -1,9 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SwiftCart || Your Fashion and Accessories partner</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwiftCart || Your Fashion and Accessories partner</title>
+
+  <!-- font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assests/icon.png" type="image/x-icon" />
+
+  <!-- Daisy UI and Tailwind css link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS link -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <header>
+    <!-- start the Nav-bar -->
+    <div class="navbar md:w-11/12 md:mx-auto shadow-sm md:shadow-none">
+      <div class="navbar-start">
+
+        <a href="index.html"
+          class="btn text-2xl font-bold text-[#4F39F6] bg-white border-none shadow-none">SwiftCart</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="index.html"
+              class="font-semibold text-gray-700 bg-white rounded-none hover:text-[#4F39F6] transition-colors duration-200">Home</a>
+          </li>
+          <li><a href=""
+              class=" font-semibold text-gray-700 bg-white rounded-none hover:text-[#4F39F6] transition-colors duration-200">Products</a>
+          </li>
+          <li><a href=""
+              class=" font-semibold text-gray-700 bg-white rounded-none hover:text-[#4F39F6] transition-colors duration-200">About</a>
+          </li>
+          <li><a href=""
+              class=" font-semibold text-gray-700 bg-white rounded-none hover:text-[#4F39F6] transition-colors duration-200">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-white rounded-none border-none shadow-none"><i class="fa-solid fa-cart-shopping"></i></a>
+
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn bg-white border-none lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <li><a href="" class="">Home</a></li>
+            <li><a href="" class="">Products</a></li>
+            <li><a href="" class="">About</a></li>
+            <li><a href="" class="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main></main>
+
+  <footer></footer>
+</body>
+
 </html>
