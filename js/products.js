@@ -22,13 +22,13 @@ const loadAllProductDetails = async (id) => {
 const displayProductDetails = (details) => {
   const modalContainer = document.getElementById("modal-container");
   modalContainer.innerHTML = `
-  <h2 class="text-xl text-black font-semibold">${details.title}</h2>
-            <h5 class="text-black font-medium">${details.description}</h5>
+  <h2 class="text-xl text-black font-semibold mb-2">${details.title}</h2>
+            <h5 class="text-black font-medium mb-3">${details.description}</h5>
             <div class="flex justify-between items-center">
-              <p class="text-black text-lg">$${details.price}</p>
-              <p class="text-lg">  <i class="fa-solid fa-star text-yellow-500"></i> ${details.rating.rate}</p>
+              <p class="text-black  font-bold ">$${details.price}</p>
+              <p class="font-bold">  <i class="fa-solid fa-star text-yellow-500"></i> ${details.rating.rate}</p>
             </div>
-            <button class="btn btn-sm btn-primary">Buy Now</button>
+            <button class="btn btn-sm btn-primary mt-20">Buy Now</button>
           </div>
   `;
   document.getElementById("details_modal").showModal();
