@@ -12,6 +12,28 @@ const loadAllProducts = () => {
     .then((data) => displayAllProduct(data));
 };
 
+const loadAllProductDetails = async (id) => {
+  const url = `https://fakestoreapi.com/products/${id}`;
+  const response = await fetch(url);
+  const details = await response.json();
+  displayProductDetails(details);
+};
+
+const displayProductDetails = (details) => {
+  const modalContainer = document.getElementById("modal-container");
+  modalContainer.innerHTML = `
+  <h2 class="text-xl text-black font-semibold">${details.title}</h2>
+            <h5 class="text-black font-medium">${details.description}</h5>
+            <div class="flex justify-between items-center">
+              <p class="text-black text-lg">$${details.price}</p>
+              <p class="text-lg">  <i class="fa-solid fa-star text-yellow-500"></i> ${details.rating.rate}</p>
+            </div>
+            <button class="btn btn-sm btn-primary">Buy Now</button>
+          </div>
+  `;
+  document.getElementById("details_modal").showModal();
+};
+
 const displayAllProduct = (products) => {
   const productContainer = document.getElementById("product-container");
   productContainer.innerHTML = "";
@@ -41,7 +63,7 @@ const displayAllProduct = (products) => {
             <h1 class="card-title mb-3">$${product.price}</h1>
 
             <div class="card-actions justify-between">
-              <div class="btn btn-active btn-sm">
+              <div onclick = "loadAllProductDetails(${product.id})" class="btn btn-active btn-sm">
                 <i class="fa-regular fa-eye"></i> Details
               </div>
               <div class="btn btn-primary btn-sm">
@@ -108,7 +130,7 @@ const displayCategoryProduct = (products) => {
             <h1 class="card-title mb-3">$${product.price}</h1>
 
             <div class="card-actions justify-between">
-              <div class="btn btn-active btn-sm">
+              <div onclick = "loadAllProductDetails(${product.id})" class="btn btn-active btn-sm">
                 <i class="fa-regular fa-eye"></i> Details
               </div>
               <div class="btn btn-primary btn-sm">
